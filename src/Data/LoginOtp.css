@@ -1,0 +1,57 @@
+.loginviaotp{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("../Data/3425225.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.input_data{
+    display: flex;
+    flex-direction: column;
+    background-color: white ;
+    padding: 1vw 3.5vw;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.lockicon{
+    background-color:gold;
+    border-radius: 4rem;
+    font-size: 1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.input_data button{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: none;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input_data h1{
+    color: purple;
+    text-align: center;
+}
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+    
+}
+.spinner{
+    animation: spinner .6s linear infinite;
+}

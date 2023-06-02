@@ -1,0 +1,32 @@
+.login{
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+.login .input{
+  padding: 1em;
+  margin: 0.2em;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.login label sup{
+  color: red;
+  font-size: 1.1rem; 
+  position: relative;
+  top: 5px;
+}
+.login span{
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+input:invalid[focused="true"] ~ span{
+  display: block;
+}
+
+
+

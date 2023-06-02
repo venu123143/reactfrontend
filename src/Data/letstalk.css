@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.letstalk {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background: #081b29;
+    color: white;
+    min-height: 100vh;
+}
+
+.letstalk>h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.filters{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.msgdata {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+}
+
+.message {
+    border: 2px solid blue;
+    position: relative;
+    padding: 1rem;
+    font-size: .91rem;
+    font-weight: normal;
+    width: 33.33%px;
+    min-height: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(93.87deg, #095ae6, #062794);
+    z-index: -1;
+    transition: 1s;
+}
+
+.message:hover {
+    color: #fff;
+}
+
+.message:hover::before {
+    width: 100%;
+}
+
+.message .msgdetails {
+    color: #ddd;
+    text-align: justify;
+}
+
+.likes {
+    display: none;
+}
+
+.likes div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message:hover .likes {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+.likebuttons {
+    background: transparent;
+    border: none;
+    margin: 5px 20px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    z-index: 1;
+    color: #ddd;
+}
+
+.likebuttons i {
+    font-size: 2rem;
+}
+
+.likebuttons .colorRed {
+    color: red;
+
+}
+
+.deletemsg button {
+    display: none;
+
+}
+
+.message:hover .deletemsg button {
+    display: block;
+    padding: 10px;
+    color: black;
+    border: none;
+    font: 1rem bold;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2;
+    /* background-color: rebeccapurple; */
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 90%;
+    padding: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.active-page {
+    /* padding: 0 5rem; */
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    overflow: hidden;
+    border-radius: 7px;
+    background-color: #0366d6;
+}
+
+.pagination li a {
+    border-radius: 7px;
+    padding: 0.1rem 1rem;
+    border: gray 1px solid;
+    cursor: pointer;
+}
+
+.pagination li.previous a,
+li.next a,
+li.break a {
+    border-color: transparent;
+}
+
+.pagination li.active a {
+    background-color: #0366d6;
+    border-color: transparent;
+    color: white;
+    min-width: 32px;
+}
+
+.pagination li.disabled a {
+    color: grey;
+}
+
+.pagination li.disable,
+.pagination li.disabled a {
+    cursor: default;
+}
+
+@media screen and (max-width:950px) {
+    .msgdata {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .filters{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 0.6rem;
+    }
+    .msgdata {
+        grid-template-columns: 1fr;
+        padding: 2rem 50px;
+    }
+}
