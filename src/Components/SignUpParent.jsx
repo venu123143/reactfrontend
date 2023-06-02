@@ -78,7 +78,7 @@ const SignUpParent = () => {
     const submitData = async (e) => {
         e.preventDefault()
         const { username, phoneno, emailid, password, confirmPassword, gender } = values
-        const res = await fetch(`${process.env.SITE}/register`, {
+        const res = await fetch(`${process.env.REACT_APP_SITE}/register`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, phoneno, emailid, password, confirmPassword, gender })

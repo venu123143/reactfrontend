@@ -22,7 +22,7 @@ const LoginOtp = () => {
     const [showotp, setShowOtp] = useState(false)
     const { state, dispatch } = useContext(context);
     const onSignUp = async () => {
-        const res = fetch(`${process.env.SITE}/loginviaotp`, {
+        const res = fetch(`${process.env.REACT_APP_SITE}/loginviaotp`, {
             method: "post",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ phoneno: ph })

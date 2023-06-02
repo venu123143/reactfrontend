@@ -6,7 +6,7 @@ const Logout = () => {
     const { state, dispatch } = useContext(context);
     console.log(state);
     useEffect(() => {
-        fetch(`${process.env.SITE}/logout`, {
+        fetch(`${process.env.REACT_APP_SITE}/logout`, {
             method: 'GET',
             headers: {
                 Accept: 'application/json',

@@ -9,7 +9,7 @@ const About = () => {
     const [profile, setProfile] = useState('')
     const callAboutPage = async () => {
         try {
-            const res = await fetch(`${process.env.SITE}/about`, {
+            const res = await fetch(`${process.env.REACT_APP_SITE}/about`, {
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",

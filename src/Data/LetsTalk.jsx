@@ -14,7 +14,7 @@ const LetsTalk = () => {
     var limit = null;
 
     const filterLikes=async (value)=>{
-        const res = await fetch(`${process.env.SITE}/sortdata?likes=${value}&page=${state}&limit=${limit}`, {
+        const res = await fetch(`${process.env.REACT_APP_SITE}/sortdata?likes=${value}&page=${state}&limit=${limit}`, {
             method: "GET",
             headers: {
                 Accept: "appllication/json",
@@ -26,7 +26,7 @@ const LetsTalk = () => {
         setMessage(data)
     }
     const filterDate= async (value)=>{
-        const res = await fetch(`${process.env.SITE}/sortdate?date=${value}&page=${state}&limit=${limit}`, {
+        const res = await fetch(`${process.env.REACT_APP_SITE}/sortdate?date=${value}&page=${state}&limit=${limit}`, {
             method: "GET",
             headers: {
                 Accept: "appllication/json",
@@ -56,7 +56,7 @@ const LetsTalk = () => {
     }
     const callLetsTalk = async () => {
         try {
-            const res = await fetch(`${process.env.SITE}/letstalk?page=${currentpage}&limit=${limit}`, {
+            const res = await fetch(`${process.env.REACT_APP_SITE}/letstalk?page=${currentpage}&limit=${limit}`, {
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",
@@ -85,7 +85,7 @@ const LetsTalk = () => {
         currentpage = e.selected + 1
         dispatch({ type: 'PageNo', payload: currentpage })
         try {
-            const res = await fetch(`${process.env.SITE}/letstalk?page=${currentpage}&limit=${limit}`, {
+            const res = await fetch(`${process.env.REACT_APP_SITE}/letstalk?page=${currentpage}&limit=${limit}`, {
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",
@@ -124,7 +124,7 @@ const LetsTalk = () => {
 
     const getSetData = async (type, id) => {
         try {
-            const res = await fetch(`${process.env.SITE}/${type}/${id}?page=${state}&limit=${limit}`, {
+            const res = await fetch(`${process.env.REACT_APP_SITE}/${type}/${id}?page=${state}&limit=${limit}`, {
                 method: 'GET',
                 headers: { "Content-Type": "application/json" },
                 body: null
@@ -140,7 +140,7 @@ const LetsTalk = () => {
     const deleteMessage = async (user, _id) => {
         if (window.confirm(`do you want to delete`)) {
             try {
-                const res = await fetch(`${process.env.SITE}/deletemsg/${_id}?page=${state}&limit=${limit}`, {
+                const res = await fetch(`${process.env.REACT_APP_SITE}/deletemsg/${_id}?page=${state}&limit=${limit}`, {
                     method: "DELETE",
                     headers: { 'Content-Type': 'Aplication/json' },
                     body: JSON.stringify({ user: user })

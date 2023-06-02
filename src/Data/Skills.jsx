@@ -14,7 +14,7 @@ import nodejs from "../MainImages/pngwing.com.png"
 import { useEffect } from "react"
 const Skills = () => {
     const callskillsPage = async () => {
-        const res = await fetch('/skills', {
+        const res = await fetch(`${process.env.REACT_APP_SITE}/skills`, {
             method: "GET",
             headers: {
                 Accept: "appllication/json",

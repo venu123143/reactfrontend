@@ -13,11 +13,10 @@ const Contact = () => {
     const changeDetails = (e) => {
         setDetails({ ...details, [e.target.name]: e.target.value })
     }
-
     const onSendMsg = async (e) => {
         e.preventDefault()
         const { name, email, message } = details;
-        const res = await fetch(`${process.env.SITE}/contact`, {
+        const res = await fetch(`${process.env.REACT_APP_SITE}/contact`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, message })

@@ -46,7 +46,7 @@ const LoginParent = () => {
         const { username, password } = values;
 
         try {
-            const res = await fetch(`${process.env.SITE}/login`, {
+            const res = await fetch(`${process.env.REACT_APP_SITE}/login`, {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password }) //server dont understand json so, convert to string
