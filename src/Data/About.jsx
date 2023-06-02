@@ -32,15 +32,14 @@ const About = () => {
     }
     useEffect(() => {
         callAboutPage();
-        // console.log("use effect");
-    }, [])
+    })
     return (
         <>
             <section id="about-section">
                 {/* about left */}
                 <Toaster/>
                 <div className="about-left">
-                    <img src={image} alt="image" width="350px" />
+                    <img src={image} alt="left" width="350px" />
                 </div>
                 {/* about right */}
                 <div className="about-right">

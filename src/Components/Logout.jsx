@@ -24,7 +24,7 @@ const Logout = () => {
             console.log(err);
         })
 
-    },[])
+    })
     return (
         <div>
             <>

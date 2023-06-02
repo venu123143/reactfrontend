@@ -21,6 +21,7 @@ const LoginOtp = () => {
     const [ph, setPh] = useState("")
     const [showotp, setShowOtp] = useState(false)
     const { state, dispatch } = useContext(context);
+    console.log(state,user);
     const onSignUp = async () => {
         const res = fetch(`${process.env.REACT_APP_SITE}/loginviaotp`, {
             method: "post",
