@@ -39,7 +39,7 @@ const About = () => {
                 {/* about left */}
                 <Toaster/>
                 <div className="about-left">
-                    <img src={image} alt="left" width="350px" />
+                    <img src={image} alt="left" />
                 </div>
                 {/* about right */}
                 <div className="about-right">

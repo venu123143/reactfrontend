@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: center;
     background-color: #081b29;
     color: #fff;
     padding: 80px 80px;
@@ -32,10 +33,12 @@
 }
 
 .about-left {
-    /* background:; */
     height: 65vh;
     width: 45%;
     position: relative;
+}
+.about-left img{
+    width: 300px;
 }
 
 .about-left::before {
@@ -167,7 +170,11 @@
     #about-section {
         width: 100%;
         padding: 40px 40px;
+        /* display: block;
+        flex-direction: column;
+        justify-content: center; */
     }
+  
 
 }
 
@@ -176,11 +183,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
-
     .about-left {
         width: 100vw;
         text-align: center;
+    }
+    .about-left img{
+        width: 300px;
     }
 
     .about-right {
@@ -192,8 +202,13 @@
     #about-section {
         padding: 20px 20px;
     }
-    .about-left{
+    .about-left {
+        width: 100vw;
         text-align: center;
+    }
+    .about-left img{
+        width: 55vw;
+        height: 40vh;
     }
 
 }
