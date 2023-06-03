@@ -9,10 +9,8 @@ const Home = () => {
             <div className="homecontent">
                 <h1>Hi i'm Venu Gopal</h1>
                 <h3>full stack developer</h3>
-                <p>I am a B.E graduate, looking for a job in the field of software sector
-                    that is competitive and inspiring which offers the opportunity of
-                    contributing towards development of the organization and enhances the
-                    potential for professional and personal satisfaction.
+                <p>This is the portfolio website which is built on top of React js as frontend and Express js as backend and mongodb as database. 
+                    In this i had mentioned my skills, projects and my Bio and also you can get my resume by clicking on Hire me button.
                 </p>
                 <div className="btn-box">
                     <Link target="_blank" to="https://www.canva.com/design/DAFj-JlZs_I/AltkSB_BnhatSYzjkgFiHg/edit?utm_content=DAFj-JlZs_I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" download="resume" >Hire me</Link>

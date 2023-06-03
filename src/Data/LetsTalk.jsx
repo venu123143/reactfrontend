@@ -66,13 +66,13 @@ const LetsTalk = () => {
             })
             // it is array [data, count]
             const ans = await res.json();
-            limit = ans[2]
             if (res.status !== 200) {
                 toast.error(ans[0].error)
                 setTimeout(() => {
                     navigate('/login');
                 }, 1000);
             } else {
+                limit = ans[2]
                 setMessage(ans[0])
                 setCount(ans[1])
             }

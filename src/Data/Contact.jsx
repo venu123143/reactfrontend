@@ -23,7 +23,7 @@ const Contact = () => {
         });
         // console.log(res);
         const data = await res.json();
-        // console.log(data.error, res.status);
+        console.log(data.error, res.status);
         switch (res.status) {
             case 401:
                 toast.error(data.error)
@@ -36,7 +36,6 @@ const Contact = () => {
                     navigate('/letstalk')
                 }, 1000);
                 toast.success(data.error)
-                
                 break;
             default:
                 toast.error(data.error)
