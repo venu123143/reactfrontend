@@ -170,9 +170,6 @@
     #about-section {
         width: 100%;
         padding: 40px 40px;
-        /* display: block;
-        flex-direction: column;
-        justify-content: center; */
     }
   
 
@@ -187,10 +184,12 @@
     }
     .about-left {
         width: 100vw;
+        height: 50vh;
         text-align: center;
     }
     .about-left img{
-        width: 300px;
+        width: 60vw;
+        height: 40vh;
     }
 
     .about-right {
