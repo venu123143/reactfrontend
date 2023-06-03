@@ -204,6 +204,7 @@
     }
     .about-left {
         width: 100vw;
+        height: 50vh;
         text-align: center;
     }
     .about-left img{

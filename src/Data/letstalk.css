@@ -20,6 +20,7 @@
     margin-bottom: 20px;
 }
 .filters{
+    margin: 0 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,8 +28,10 @@
 .msgdata {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-flow: column; */   
     grid-gap: 1rem;
     padding: 1rem 80px;
+    flex-wrap: wrap;
 }
 
 .message {
@@ -37,7 +40,8 @@
     padding: 1rem;
     font-size: .91rem;
     font-weight: normal;
-    width: 33.33%px;
+    display: grid;
+    min-width: 33.33%;
     min-height: 100%;
     cursor: pointer;
     border-radius: 10px;
@@ -173,6 +177,9 @@ li.break a {
 }
 
 @media screen and (max-width:950px) {
+    .filters{
+        margin: 0 40px;
+    }
     .msgdata {
         grid-template-columns: repeat(2, 1fr);
         padding: 2rem 50px;
