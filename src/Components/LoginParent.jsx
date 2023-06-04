@@ -39,7 +39,7 @@ const LoginParent = () => {
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
-
+    console.log(process.env.REACT_APP_SITE);
     const toggleLogin = async (e) => {
         e.preventDefault();
         setLoading(true)
