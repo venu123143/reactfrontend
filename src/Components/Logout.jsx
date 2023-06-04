@@ -14,12 +14,12 @@ const Logout = () => {
             },
             credentials: "include"
         }).then((res) => {
-            dispatch({ type: 'User', payload: false })
-            navigate("/login")
             if (res.status !== 200) {
                 const error = new Error(res.error);
                 throw error
             }
+            dispatch({ type: 'User', payload: false })
+            navigate("/login")
         }).catch((err)=>{
             console.log(err);
         })
@@ -28,7 +28,7 @@ const Logout = () => {
     return (
         <div>
             <>
-                <h1>User Logged out sucessfully</h1>
+                <h1 style={{textAlign:'center',margin:'100px 0'}}>User Logged out sucessfully</h1>
             </>
         </div>
     )

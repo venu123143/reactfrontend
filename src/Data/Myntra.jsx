@@ -13,6 +13,7 @@ import Logout from "../Components/Logout"
 import { createContext, useReducer } from "react"
 import { initialState,reducer } from "../Reducer/UseReducer"
 import LetsTalk from "./LetsTalk"
+import Hobbies from "./Hobbies"
 export const context = createContext();
 export const Routing = () => {
     return (
@@ -28,6 +29,7 @@ export const Routing = () => {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/letstalk" element={<LetsTalk />} />
+                <Route path="/hobbies" element={<Hobbies />} />
                 <Route path="*" element={<Errorpage />}></Route>
             </Routes>
         </>

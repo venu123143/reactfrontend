@@ -39,7 +39,7 @@ const LoginParent = () => {
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
-    console.log(process.env.REACT_APP_SITE);
+    // console.log(process.env.REACT_APP_SITE);
     const toggleLogin = async (e) => {
         e.preventDefault();
         setLoading(true)
@@ -54,6 +54,7 @@ const LoginParent = () => {
             const data = await res.json();
             if (!data) {
                 toast.error("server not connected or data not found")
+                setLoading(false)
             }
             else if (res.status === 400 || res.status === 401) {
                 // alert("server is not running or incorrct password")
@@ -69,7 +70,7 @@ const LoginParent = () => {
         } catch (err) {
             console.log(err);
             toast.error("server not connected or data not found")
-
+            setLoading(false)
         }
     }
     return (

@@ -32,7 +32,7 @@ const About = () => {
     }
     useEffect(() => {
         callAboutPage();
-    })
+    },[])
     return (
         <>
             <section id="about-section">

@@ -13,7 +13,7 @@ const LetsTalk = () => {
     var currentpage = null;
     var limit = null;
 
-    const filterLikes=async (value)=>{
+    const filterLikes = async (value) => {
         const res = await fetch(`${process.env.REACT_APP_SITE}/sortdata?likes=${value}&page=${state}&limit=${limit}`, {
             method: "GET",
             headers: {
@@ -25,7 +25,7 @@ const LetsTalk = () => {
         const data = await res.json();
         setMessage(data)
     }
-    const filterDate= async (value)=>{
+    const filterDate = async (value) => {
         const res = await fetch(`${process.env.REACT_APP_SITE}/sortdate?date=${value}&page=${state}&limit=${limit}`, {
             method: "GET",
             headers: {
@@ -37,7 +37,7 @@ const LetsTalk = () => {
         const data = await res.json();
         setMessage(data)
     }
-    const filterData=(e)=>{
+    const filterData = (e) => {
         // filterSearch(e.target.value)
         switch (e.target.value) {
             case "love":
@@ -122,20 +122,21 @@ const LetsTalk = () => {
         callLetsTalk();
     }, [])
 
-    const getSetData = async (type, id) => {
-        try {
-            const res = await fetch(`${process.env.REACT_APP_SITE}/${type}/${id}?page=${state}&limit=${limit}`, {
-                method: 'GET',
-                headers: { "Content-Type": "application/json" },
-                body: null
-            })
-            const data = await res.json();
-            console.log(data);
-            setMessage(data)
-        } catch (err) {
-            console.log(err);
+    const getSetData =
+        async (type, id) => {
+            try {
+                const res = await fetch(`${process.env.REACT_APP_SITE}/${type}/${id}?page=${state}&limit=${limit}`, {
+                    method: 'GET',
+                    headers: { "Content-Type": "application/json" },
+                    body: null
+                })
+                const data = await res.json();
+                console.log(data);
+                setMessage(data)
+            } catch (err) {
+                console.log(err);
+            }
         }
-    }
 
     const deleteMessage = async (user, _id) => {
         if (window.confirm(`do you want to delete`)) {
@@ -195,10 +196,10 @@ const LetsTalk = () => {
                         message.map((data) => (
                             <div key={data._id} className="message">
                                 <div className="msgdetails">
-                                    <h4 style={{ background: 'green' }}>Name : {data.name}</h4>
-                                    <h4 style={{ background: 'red' }}>Email :{data.email}</h4>
-                                    <h4 style={{ background: 'purple' }}>Date : {data.createdAT.split('T')[0]}</h4>
-                                    <h4 style={{ background: 'orange' }}>time : {data.createdAT.split('T')[1].split('.')[0]}</h4>
+                                    <h4 >Name : {data.name}</h4>
+                                    <h4 >Email :{data.email}</h4>
+                                    <h4 >Date : {data.createdAT.split('T')[0]}</h4>
+                                    <h4 >time : {data.createdAT.split('T')[1].split('.')[0]}</h4>
                                     <p>Message : {data.message}</p>
                                 </div>
                                 <div className="likes">
