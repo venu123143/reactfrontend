@@ -128,6 +128,13 @@ const About = () => {
                                 <p>Java</p>
 
                             </li>
+                            <li>
+                                <div className="expertise-logo">
+                                    <i className="fab fa-python"></i>
+                                </div>
+                                <p>Python 3</p>
+
+                            </li>
                         </ul>
                     </div>
 
