@@ -5,9 +5,6 @@ import playgames from "../MainImages/playgames.jpg"
 import teaching from "../MainImages/teaching.jpg"
 import editing from "../MainImages/editing.jpg"
 import coding from "../MainImages/coding.jpg"
-
-import $ from 'jquery'
-
 // hobbies and qualities
 import "./hobbies.css"
 const Hobbies = () => {
