@@ -188,13 +188,18 @@ li.break a {
 
 @media screen and (max-width:650px) {
     .filters{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 0.6rem;
-        grid-row-end: span;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items: center;
+        margin: 20px;
     }
     .msgdata {
         grid-template-columns: 1fr;
-        padding: 2rem 50px;
+        padding: 2rem 10px;
     }
+    /* .message .msgdetails{
+        overflow:visible;
+        scroll-behavior: smooth;
+    } */
 }

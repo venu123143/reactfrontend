@@ -60,7 +60,6 @@
     color: black;
     transform: rotateY(180deg);
     text-align: justify;
-    /* padding: 10px; */
 }
 
 
@@ -138,5 +137,8 @@
 @media screen and (max-width:400px) {
     .back{
         padding: 5px 15px;
+    }
+    .back p{
+        font-size: 0.9rem;
     }
 }
