@@ -8,8 +8,8 @@ const Home = () => {
         <div className="home" id="home">
             <div className="homecontent">
                 <h1>Hi i'm Venu Gopal</h1>
-                <h3>Full stack developer</h3>
-                <p>This is the portfolio website which is built on top of React js as frontend and Express js as backend and mongodb as database. 
+                <h3>Fullstack developer</h3>
+                <p>This is the portfolio website which is built on top of React js as frontend and Express js as backend and mongodb as database.
                     In this i had mentioned my skills, projects and my Bio and also you can get my resume by clicking on Hire me button.
                 </p>
                 <div className="btn-box">
@@ -29,6 +29,7 @@ const Home = () => {
                     <img src={profile} alt="profile" className="profile" />
                 </div>
             </div>
+
         </div>
     )
 }
