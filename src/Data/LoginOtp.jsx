@@ -21,13 +21,15 @@ const LoginOtp = () => {
     const [ph, setPh] = useState("")
     const [showotp, setShowOtp] = useState(false)
     const { state, dispatch } = useContext(context);
-    console.log(state,user);
+    console.log(state,user,ph);
     const onSignUp = async () => {
+        setLoading(true)
         const res = fetch(`${process.env.REACT_APP_SITE}/loginviaotp`, {
             method: "post",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ phoneno: ph })
         })
+
         if ((await res).status === 200) {
             setLoading(true)
             onCaptchVerify()
@@ -45,6 +47,7 @@ const LoginOtp = () => {
                 })
         } else {
             toast.error("please register 1st")
+            setLoading(false)
         }
     }
     const onCaptchVerify = () => {
@@ -57,7 +60,6 @@ const LoginOtp = () => {
                 'expired-callback': () => {
                 }
             }, auth);
-
         }else{
             toast.error("recaptcha verification failed,try again ")
         }
