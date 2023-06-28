@@ -260,18 +260,10 @@
         height: 40vh;
         width: 100%;
     }
-    /* .homecontent h3{
-        text-align:start;
-    }
-    .home-sci{
-        position: static;
-    } */
-
-
     .background_img {
         display: block;
-        width: 200px;
-        height: 260px;
+        width: 55%;
+        height: 35vh;
         border-radius: 6px;
         position: absolute;
         top: 12%;

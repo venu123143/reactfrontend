@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom"
 import { context } from "../Data/Myntra"
 import { Toaster, toast } from "react-hot-toast"
 import { CgSpinner } from 'react-icons/cg';
-
+import axios from 'axios'
 const LoginParent = () => {
     const { state, dispatch } = useContext(context);
     console.log(state);
@@ -46,12 +46,15 @@ const LoginParent = () => {
         const { username, password } = values;
 
         try {
-            const res = await fetch(`${process.env.REACT_APP_SITE}/login`, {
-                method: 'POST',
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ username, password }) //server dont understand json so, convert to string
-            });
-            const data = await res.json();
+            const res = await axios.post(`${process.env.REACT_APP_SITE}/login`,{username, password}, {headers: { "Content-Type": "application/json" },withCredentials:true})
+            // const res = await fetch(`${process.env.REACT_APP_SITE}/login`, {
+            //     method: 'POST',
+            //     headers: { "Content-Type": "application/json" },
+            //     credentials:'include',
+            //     body: JSON.stringify({ username, password }) //server dont understand json so, convert to string
+            // });
+            console.log(res);
+            const data = await res.data;
             if (!data) {
                 toast.error("server not connected or data not found")
                 setLoading(false)
