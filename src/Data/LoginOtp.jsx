@@ -33,6 +33,7 @@ const LoginOtp = () => {
         if ((await res).status === 200) {
             setLoading(true)
             onCaptchVerify()
+            console.log("not comming after this");
             const appVerifier = window.recaptchaVerifier
             const formatPh = '+' + ph;
             signInWithPhoneNumber(auth, formatPh, appVerifier)

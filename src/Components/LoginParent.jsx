@@ -46,15 +46,15 @@ const LoginParent = () => {
         const { username, password } = values;
 
         try {
-            // const res = await axios.post(`${process.env.REACT_APP_SITE}/login`,JSON.stringify({username, password}), {headers: { "Content-Type": "application/json" },withCredentials:true})
-            const res = await fetch(`${process.env.REACT_APP_SITE}/login`, {
-                method: 'POST',
-                headers: { "Content-Type": "application/json" },
-                credentials: 'include',
-                body: JSON.stringify({ username, password }) //server dont understand json so, convert to string
-            });
-            const data = await res.json();
-            console.log(data);
+            const res = await axios.post(`${process.env.REACT_APP_SITE}/login`,JSON.stringify({username, password}), {headers: { "Content-Type": "application/json" },withCredentials:true})
+            // const res = await fetch(`${process.env.REACT_APP_SITE}/login`, {
+            //     method: 'POST',
+            //     headers: { "Content-Type": "application/json" },
+            //     credentials: 'include',
+            //     body: JSON.stringify({ username, password }) //server dont understand json so, convert to string
+            // });
+            // const data = await res.json();
+            const data= res.data;
             if (!data) {    
                 toast.error(" data not found")
                 setLoading(false)
