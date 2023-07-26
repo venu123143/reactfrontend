@@ -5,6 +5,7 @@ import journal from "../MainImages/journal.png"
 import navbars from "../MainImages/Navbars.png"
 import netflex from "../MainImages/netflex.png"
 import crudOperations from "../MainImages/crudOp.png"
+import taskManager from "../MainImages/taskManager.png"
 import $ from 'jquery'
 const Projects = () => {
     // for filter menu
@@ -59,14 +60,22 @@ const Projects = () => {
                     <a href="https://netflix-clone-4932c.web.app/" rel="noreferrer" target="_blank" className="project-box ott">
                         <img src={netflex} alt="img" />
                         <section>
-                            <p>Description: This is the Netflix clone which is built on top of react. Here i had used the TMDB api as backend and i used the 
+                            <p>Description: This is the Netflix clone which is built on top of react. Here i had used the TMDB api as backend and i used the
                                 axios to fetch the data from backend. </p>
+                        </section>
+                    </a>
+                    <a href="https://taskcreation.onrender.com/" rel="noreferrer" target="_blank" className="project-box ecommerce">
+                        <img src={taskManager} alt="img" />
+                        <section>
+                            <p>Description: This is the simple task manager todo application which is built on top of react.
+                                Here i had used the express for backend, mongodb for database and i used the
+                                axios to fetch the data from backend.all 4 CRUD operations are performed in this simple project. </p>
                         </section>
                     </a>
                     <a href="/" rel="noreferrer" target="_blank" className="project-box others">
                         <img src={crudOperations} alt="img" />
                         <section>
-                            <p>Description: This is the final project during my react js course. we had done the curd operations by creating the local server as backend. it is not support to deploy 
+                            <p>Description: This is the final project during my react js course. we had done the curd operations by creating the local server as backend. it is not support to deploy
                                 because the server running on local machine. this project helped a lot in my learning process.
                             </p>
                         </section>
