@@ -17,10 +17,11 @@ const Home = () => {
                     <Link to="/letstalk">Let's talk</Link>
                 </div>
                 <div className="home-sci">
+                    <a href="https://www.youtube.com/@ECEVenuGopal" rel="noreferrer noopener" target="_blank"><i className="bx bxl-youtube"></i></a>
+                    <a href="https://github.com/venu123143" rel="noreferrer noopener" target="_blank"><i className="bx bxl-github"></i></a>
                     <a href="https://www.linkedin.com/in/venu-reddy-a226881b6/" rel="noreferrer noopener" target="_blank"><i className="bx bxl-linkedin"></i></a>
                     <a href="https://www.instagram.com/dye_heart_fan/" rel="noreferrer noopener" target="_blank"><i className="bx bxl-instagram"></i></a>
                     <a href="https://twitter.com/venu_reddy_9493" rel="noreferrer noopener" target="_blank"><i className="bx bxl-twitter"></i></a>
-                    <a href="https://www.facebook.com/venureddyvanteru.vanteru/" rel="noreferrer noopener" target="_blank"><i className="bx bxl-facebook"></i></a>
                 </div>
             </div>
             <div className="forHeight">

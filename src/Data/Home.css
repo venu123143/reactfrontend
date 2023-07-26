@@ -115,7 +115,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
-    width: 250px;
+    max-width: 350px;
+    overflow: scroll;
 }
 
 .home-sci a i {
