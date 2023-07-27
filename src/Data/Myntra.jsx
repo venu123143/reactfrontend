@@ -18,7 +18,7 @@ export const context = createContext();
 export const Routing = () => {
     return (
         <>
-            <Routes>
+            <Routes basename="/reactfrontend">
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<LoginParent />} />
                 <Route path="/register" element={<SignUpParent />} />
